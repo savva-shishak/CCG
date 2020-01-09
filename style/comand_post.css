@@ -1,0 +1,25 @@
+.comandpost {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--opponent-color);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.comandpost_gamer {
+    background-color: var(--gamer-color);
+}
+
+.comandpost .comandpost__hp {
+    color: rgb(255, 255, 255);
+}
+
+.comandpost .comandpost__name {
+    color: rgb(255, 255, 255);
+}
+
+.comandpost .comandpost__damage {
+    color: rgb(255, 255, 255);
+}

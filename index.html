@@ -2,15 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Калькулятор квадратных уравнений</title>
+    <title>Хроники эдема</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/comand_post.css">
+    <link rel="stylesheet" href="style/place_buttle.css">
+    <link rel="stylesheet" href="style/card.css">
 </head>
 <body>
-<input id="inputA" value="1" type="number" placeholder="a = 0">
-<input id="inputB" value="1" type="number" placeholder="b = 0">
-<input id="inputC" value="1" type="number" placeholder="c = 0">
-<p id="equation"></p>
-<p id="example"></p>
-<p id="result"></p>
-<script src="script/main.js"></script>
+    <div class="buttle">
+        <div id="opponent" class="comandpost">
+            <span class="comandpost__hp"></span>
+            <span class="comandpost__name"></span>
+            <span class="comandpost__damage"></span>
+        </div>
+
+        <div class="placebuttle">
+            <div id="table__opponent" class="placebuttle__table"></div>
+            <div id="table__gamer" class="placebuttle__table"></div>
+        </div>
+
+        <div id="gamer" class="comandpost comandpost_gamer">
+            <span class="comandpost__hp"></span>
+            <span class="comandpost__name"></span>
+            <span class="comandpost__damage"></span>
+        </div>
+    </div>
+
+    <script src="script/main.js"></script>
 </body>
 </html>

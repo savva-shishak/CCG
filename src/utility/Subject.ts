@@ -1,7 +1,8 @@
-import { id } from "../utility";
+import { id } from "./functions";
+
 
 export class Subject<T> {
-    private value: T;
+    protected value: T;
     private subs: ((v: T) => void)[] = [];
 
     constructor(v: T) {
@@ -12,10 +13,18 @@ export class Subject<T> {
         id(input).oninput = this.inputNext(handler)
     }
 
+    public onclick(btnId: string, handler: (o: T) => T) {
+        id(btnId).onclick = _ => this.next(handler(this.value))
+    }
+
     public inputNext(handler: (value: string) => T) {
         return (e: InputEvent) => {
             this.next(handler((e.target as HTMLTextAreaElement).value))
         }
+    }
+
+    public get actual(): T {
+        return this.value;
     }
 
     public next(v: T) {
@@ -23,7 +32,7 @@ export class Subject<T> {
         this.update();
     }
 
-    private update() {
+    protected update() {
         for (const sub of this.subs) {
             sub(this.value)
         }

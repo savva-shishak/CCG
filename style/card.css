@@ -1,23 +1,22 @@
 .card {
     height: 100%;
     width: 100%;
-    padding: 5px;
+    padding: 1px;
     overflow: hidden;
 
     background-position: center;
-    background-image: url("../assets/tiger.jpg");
     background-size: auto 100%;
     display: flex;
     align-items: flex-end;
 }
 
 .card .card__properties {
-    padding: 5px;
+    padding: 3px;
     height: 30px;
     width: 100%;
     background-color: var(--opponent-color);
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,3 +26,92 @@
     background-color: var(--gamer-color);
 }
 
+.card.card_entry {
+    background: transparent;
+    border: 3px dashed var(--gamer-color);
+    color: var(--gamer-color);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.card_jolt {
+    animation: jolt .05s infinite !important;
+}
+
+.card_attack {
+    animation: attack 1s !important;
+}
+
+.card_attack.card_gamer {
+    animation: attack-gamer 1s !important;
+}
+
+.card_attack.card_entry {
+    animation: none !important;
+}
+
+.card.card_active {
+    animation: blinkibg .5s infinite;
+}
+
+@keyframes jolt {
+    from {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+    }
+
+    75% {
+        transform: translate(2px, -2px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes attack {
+    from {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    to {
+        transform: translateY(45px);
+    }
+}
+
+@keyframes attack-gamer {
+    from {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(15px);
+    }
+
+    to {
+        transform: translateY(-45px);
+    }
+}
+
+@keyframes blinkibg {
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

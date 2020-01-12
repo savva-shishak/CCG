@@ -1,0 +1,42 @@
+.btn {
+    color: white;
+    font-size: large;
+    font-weight: 600;
+
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    top: calc(50vh - 30px);
+    left: calc(50vw - 50px);
+}
+
+.btn.btn_throb {
+    animation: throb 1s infinite;
+}
+
+.btn.btn_hide { 
+    animation: none;
+    transition: .5s;
+    transform: translateX(-150vw);
+}
+
+@keyframes throb {
+    from {
+        transform: scale(.8);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+#roundbtn {
+    background-color: rgb(228, 53, 0);
+    border: 3px solid var(--opponent-color);
+}
+
+#infinite {
+    background-color: var(--gamer-color);
+    border: none;
+    border-radius: 5px;
+}

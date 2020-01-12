@@ -37,8 +37,9 @@ export function newDiv(classList: string[], children: Node[] = []) {
 export function createCardProps() {
     const hp = newDiv(['property__hp'])
     const damage = newDiv(['property__damage'])
+    const shield = newDiv(['propery__shield']);
 
-    return {hp, damage}
+    return {hp, damage, shield}
 }
 export function clearTable(table: HTMLElement) {
     const children = table.children;

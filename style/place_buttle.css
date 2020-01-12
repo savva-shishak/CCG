@@ -13,3 +13,19 @@
     justify-items: center;
     align-content: center;
 }
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.placebuttle__table .card {
+    animation: show 200ms ease-in-out;
+}
+
